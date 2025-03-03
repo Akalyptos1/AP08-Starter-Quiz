@@ -10,7 +10,7 @@ const quizData = [
     { question: "Identify the ligament indicated by the arrow:", image: "https://i.imgur.com/kQIx82Q.png", options: ["Supraspinous ligament", "Ligament flavum", "Ligamentum nuchae", "Interspinous ligament"], answer: "Ligamentum nuchae" },
     { question: "Identify the ligament which normally runs on the indicated area:", image: "https://i.imgur.com/W4ZwTKv.png", options: ["Interspinous ligament", "Laminous ligament", "Anterior longitudinal ligament", "Ligament flavum"], answer: "Anterior longitudinal ligament" },
     { question: "Identify the muscle indicated by the arrow:", image: "https://i.imgur.com/hbjvFdi.png", options: ["Spinalis", "Trapezius", "Levator scapulae", "Latissimus dorsi"], answer: "Latissimus dorsi" },
-    { question: "Identify the muscle indicated by the arrow:", image: "https://i.imgur.com/HDj9yCE.png", options: ["Levator scapulae", "Rhomboid major", "Trapezius", "Rhomboid minor"], answer: "Levator scapulae" },
+    { question: "Identify the muscle indicated by the arrow:", image: "<a href="https://imgur.com/HDj9yCE"><img src="https://i.imgur.com/HDj9yCE.png" title="source: imgur.com" /></a>", options: ["Levator scapulae", "Rhomboid major", "Trapezius", "Rhomboid minor"], answer: "Levator scapulae" },
     { question: "Identify the muscle indicated below:", image: "https://i.imgur.com/yScRAao.jpg", options: ["Trapezius", "Iliocostalis", "Spinalis", "Rhomboid major"], answer: "Spinalis" }
 ];
 
