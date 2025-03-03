@@ -14,12 +14,15 @@ const quizData = [
     { question: "Identify the muscle indicated below:", image: "https://i.imgur.com/yScRAao.jpg", options: ["Trapezius", "Iliocostalis", "Spinalis", "Rhomboid major"], answer: "Spinalis" }
 ];
 
+
 let currentQuestionIndex = 0;
 let score = 0;
+let timeLeft = 180;
 const questionElement = document.getElementById("question");
 const questionImage = document.getElementById("question-image");
 const optionsList = document.getElementById("options-list");
 const finalScoreElement = document.getElementById("final-score");
+const timerElement = document.getElementById("timer");
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -29,13 +32,23 @@ function shuffleArray(array) {
 }
 shuffleArray(quizData);
 
+function startTimer() {
+    const timerInterval = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            endQuiz();
+        } else {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            timerElement.textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            timeLeft--;
+        }
+    }, 1000);
+}
+
 function loadQuestion() {
     if (currentQuestionIndex >= quizData.length) {
-        questionElement.textContent = "Well done! You have completed the quiz.";
-        optionsList.innerHTML = "";
-        questionImage.style.display = "none";
-        finalScoreElement.textContent = `Your final score is ${score}/${quizData.length}.`;
-        finalScoreElement.style.display = "block";
+        endQuiz();
         return;
     }
     const currentQuestion = quizData[currentQuestionIndex];
@@ -63,4 +76,14 @@ function checkAnswer(selectedOption, correctAnswer) {
     }, 1000);
 }
 
+function endQuiz() {
+    questionElement.textContent = "Well done! You have completed the quiz.";
+    optionsList.innerHTML = "";
+    questionImage.style.display = "none";
+    finalScoreElement.textContent = `Your final score is ${score}/${quizData.length}.`;
+    finalScoreElement.style.display = "block";
+    timerElement.style.display = "none";
+}
+
+startTimer();
 loadQuestion();
