@@ -9,10 +9,11 @@
 <body>
     <div class="quiz-container">
         <h2 id="question">Loading question...</h2>
-        <img id="question-image" src="" alt="Anatomy Image">
+        <img id="question-image" src="" alt="Loading image..." onerror="this.onerror=null; this.src='https://via.placeholder.com/500x300?text=Image+Not+Available';">
         <ul id="options-list"></ul>
+        <h3 id="timer">Time Left: 3:00</h3>
         <h3 id="final-score" style="display: none;"></h3>
     </div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
