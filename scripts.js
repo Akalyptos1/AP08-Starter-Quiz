@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM fully loaded. Initializing quiz...");
 
     const quizData = [
-        { question: "Identify the structure shown:", image: "https://i.imgur.com/SHPuF1.png", options: ["The C1 vertebra", "The C2 vertebra", "Cervical vertebra", "Thoracic vertebra"], answer: "The C1 vertebra" },
+        { question: "Identify the structure shown:", image: "https://i.imgur.com/SHPhuF1.png", options: ["The C1 vertebra", "The C2 vertebra", "Cervical vertebra", "Thoracic vertebra"], answer: "The C1 vertebra" },
         { question: "Identify the structure shown:", image: "https://i.imgur.com/maAjJQP.png", options: ["The C1 vertebra", "The C2 vertebra", "Cervical vertebra", "Thoracic vertebra"], answer: "The C2 vertebra" },
         { question: "Identify the structure shown:", image: "https://i.imgur.com/AJxFHJd.png", options: ["Atypical cervical vertebra", "Typical cervical vertebra", "Typical thoracic vertebra", "Typical lumbar vertebra"], answer: "Typical cervical vertebra" },
         { question: "Identify the structure shown:", image: "https://i.imgur.com/6gZjgqL.png", options: ["Typical cervical vertebra", "Atypical cervical vertebra", "Typical thoracic vertebra", "Typical lumbar vertebra"], answer: "Typical lumbar vertebra" },
